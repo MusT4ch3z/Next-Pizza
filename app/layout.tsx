@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/widgets";
 
 const nunito = Nunito({
    subsets: ["cyrillic"],
@@ -10,7 +11,8 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
    title: "Next Pizza",
-   description: "Pet-project Next.js + Typescript + Tailwind CSS + Vercel + Prisma + PostgreSQL + NextAuth",
+   description:
+      "Pet-project Next.js + Typescript + Tailwind CSS + Vercel + Prisma + PostgreSQL + NextAuth",
 };
 
 export default function RootLayout({
@@ -20,7 +22,12 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body className={nunito.className}>{children}</body>
+         <body className={nunito.className}>
+            <main className="min-h-screen">
+               <Header />
+               {children}
+            </main>
+         </body>
       </html>
    );
 }

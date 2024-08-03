@@ -1,11 +1,24 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Title } from "@/components/ui";
+import { Container, Filters } from "@/components/widgets";
+import { TopBar } from "../components/widgets/Top-bar";
 
 export default function Home() {
    return (
-      <h1>
-         Home
-         <Button variant={"outline"}>Button</Button>
-      </h1>
+      <>
+         <Container className="mt-10">
+            <Title text="Все питсы" size="lg" className="font-extrabold" />
+         </Container>
+         <TopBar />
+         <Container className="pb-14">
+            <div className="flex gap-[60px]">
+               <div className="w-[250px]">
+                  <Filters />
+               </div>
+               <div className="flex-1">
+                  <div className="flex flex-col gap-16">Список товаров</div>
+               </div>
+            </div>
+         </Container>
+      </>
    );
 }
