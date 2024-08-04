@@ -10,3 +10,4 @@ export { Skeleton } from "./skeleton";
 export { Slider } from "./slider";
 export { Textarea } from "./textarea";
 export { FilterCheckbox } from "./filter-checkbox";
+export { RangeSlider } from "./range-slider";
